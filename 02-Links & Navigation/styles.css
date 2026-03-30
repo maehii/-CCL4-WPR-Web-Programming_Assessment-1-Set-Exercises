@@ -1,0 +1,123 @@
+/* exercise 01: Recipe Page */
+
+:root {     /* defines global (color) variables! */
+    --background: #edebea;
+    --text:#4b3831;
+    --main-light: #edebea;
+    --main-dark: #353032;
+    --accent: #dcbab4;
+    --accent-complimentary: #c0c59c;
+    --accent-secondary: #e1cdc3;
+    --accent-tertiary: #bfc7d5;
+
+}
+
+@font-face {    /* import regular font */
+    font-family: 'Gaegu';
+    font-weight: 400;
+    src: url('./fonts/Gaegu/Gaegu-Regular.ttf');
+}
+
+
+body {
+  font-family: 'Gaegu', sans-serif;
+  background-color: var(--background);
+  margin: 0;
+  padding: 0;
+}
+
+main {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  max-width: 100ch;
+  margin: auto;
+  padding: 1rem;
+}
+
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-size: 1.5rem;
+  background-color: var(--accent);
+  border-bottom: var(--accent-tertiary) solid 6px;
+}
+
+.nav-brand {
+  display: flex;
+  align-items: center;
+  color: var(--main-light);
+  gap: 1ch;
+}
+
+.logo {
+  height: 40px;
+  width: auto;
+  padding: 0.5em 1em 0.5em 2em;
+}
+
+.nav-list {
+  list-style-type: none;
+  margin: 0;
+  padding: 0.5em 2em;
+  display: flex;
+  gap: 1.5rem;
+}
+
+.nav-list a {
+  text-decoration: none;  
+  color: var(--main-light);
+}
+
+.nav-list a:hover {
+  color: var(--accent-secondary);
+}
+
+a:hover {
+    color: var(--accent-secondary);
+}
+
+
+figure figcaption {
+    font-size: 0.9rem;
+    font-weight: 700;
+    color: var(--accent);
+}
+
+figure figcaption a {
+    font-weight: 400;
+    color: inherit;
+}
+
+
+article {
+  grid-column: span 3;
+}
+ 
+article h1 {
+  margin-block: 0;
+  font-size: 2rem;
+}
+
+article img {
+  align-items: center;
+  width: 75%;
+  aspect-ratio: 4/3;
+  object-fit: cover;
+  border: var(--accent-complimentary) solid 10px;
+  border-radius: 16px;
+ }
+
+article p {
+  text-indent: 50px;
+}
+
+
+footer {
+  display: flex;
+  background-color: #e1cdc8;
+  color: #ffffff;
+  padding: 1rem;
+  justify-content: center;
+}
