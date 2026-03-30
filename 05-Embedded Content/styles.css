@@ -1,3 +1,87 @@
-:root {
-    
+/* exercise 05: Embedded Content */
+
+
+:root {     /* defines global variables! */
+    --background: #edebea;
+    --text:#4b3831;
+    --main-light: #edebea;
+    --main-dark: #353032;
+    --accent: #dcbab4;
+    --accent-complimentary: #c0c59c;
+    --accent-secondary: #e1cdc3;
+    --accent-tertiary: #bfc7d5;
+    --accent-quaternary: #8c95a3;
+
+    background-color: var(--background);
+    color: var(--text);
+
+}
+
+@font-face {    /* regular font */
+    font-family: 'GI-Font';
+    font-weight: 400;
+    src: url('./fonts/Genshin-Impact-Font/zh-cn.ttf');
+}
+
+@font-face {    /* for footer */
+    font-family: 'Gaegu';
+    font-weight: 400;
+    src: url('./fonts/Gaegu/Gaegu-Bold.ttf');
+}
+
+body {
+    font-family: 'GI-Font', sans-serif;
+    margin: 0;
+    padding: 0;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+}
+
+h1 {
+    font-family: 'GI-Font', sans-serif;
+    font-weight: 400;
+    font-size: 1.5rem;
+    text-align: center;
+    position: absolute;
+    top: 0;
+    padding: 1rem;
+}
+
+video { /* cool two-tone border */
+    border-radius: 12px;
+    max-width: 100%;
+    margin: 0 auto;
+
+    border-top: var(--accent-tertiary) solid 10px;
+    border-left: var(--accent-tertiary) solid 10px;
+    border-bottom: var(--accent-quaternary) solid 10px;
+    border-right: var(--accent-quaternary) solid 10px;
+    box-shadow: #939fa3 0 0 24px 5px;
+}
+
+figure {
+    margin: 0 5%;
+    padding: 0;
+}
+
+figcaption {
+    color: var(--accent-quaternary);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    flex: 1;
+}
+
+footer {
+  display: flex;
+  background-color: var(--accent);
+  font: 1.25rem 'Gaegu', sans-serif;
+  color: #ffffff;
+  padding: 1rem;
+  justify-content: center;
 }
