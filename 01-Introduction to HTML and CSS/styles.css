@@ -1,4 +1,6 @@
-:root {     /* defines global variables! */
+/* exercise 01: Recipe Page */
+
+:root {     /* defines global (color) variables! */
     --background: #edebea;
     --text:#4b3831;
     --main-light: #edebea;
@@ -10,7 +12,7 @@
 
 }
 
-@font-face {    /* regular font */
+@font-face {    /* import regular font */
     font-family: 'Gaegu';
     font-weight: 400;
     src: url('./fonts/Gaegu/Gaegu-Regular.ttf');
@@ -90,7 +92,7 @@ figure figcaption a {
 
 
 article {
-  grid-column: span 2;
+  grid-column: span 3;
 }
  
 article h1 {
@@ -99,7 +101,8 @@ article h1 {
 }
 
 article img {
-  width: 100%;
+  align-items: center;
+  width: 75%;
   aspect-ratio: 4/3;
   object-fit: cover;
   border: var(--accent-complimentary) solid 10px;
@@ -118,41 +121,3 @@ footer {
   padding: 1rem;
   justify-content: center;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-/**.menu {
-    background-color: #E3B3B1;
-    overflow: hidden;
-}
-.menu a{
-    float: right;
-    color: #FAF4F0;
-    text-align: center;
-    padding: 15px 17px;
-    text-decoration: none;
-    font-size: 17px;
-}
-.menu a:hover {
-    background-color: #FAF4F0;
-    color: #ddb4be;
-}
-.menu a.active{
-    background-color: #FAF4F0;
-    color:#ddb4be;
-}
-.footer {
-    margin-top: 500px;
-    background-color: #ddb4be;
-    color: #FAF4F0;
-}**/
